@@ -1,0 +1,65 @@
+$primary-color: #121212;
+$secondary-color: #fcf7ee;
+
+@font-face {
+    font-family: 'Syne';
+    src: url('./assets/fonts/Syne-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: $secondary-color;
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+    padding: 50px 0;
+    flex-direction: column;
+    gap: 30px;
+
+    h1 {
+        color: $primary-color;
+        font-family: 'Syne', serif;
+    }
+
+    img {
+        width: 500px;
+    }
+
+    .geometric-shapes {
+        display: flex;
+        gap: 30px;
+
+        .geometric-shapes__figure {
+            height: 120px;
+            width: 120px;
+            display: flex;
+            position: relative;
+
+            &--yellow {
+                background-color: #fecb14;
+                border-radius: 50% 50% 0% 50%;
+            }
+
+            &--orange {
+                background-color: #ff9b7a;
+                border-bottom-left-radius: 100px;
+                border-bottom-right-radius: 100px;
+            }
+
+            &--blue {
+                background-color: #1e93ff;
+                border-radius: 0% 0% 50% 50%;
+                place-content: center;
+
+                span {
+                    background-color: #fcf7ee;
+                    width: 60px;
+                    height: 100px;
+                    display: flex;
+                    border-radius: 0% 0% 50% 50%;
+                }
+            }
+        }
+    }
+}
